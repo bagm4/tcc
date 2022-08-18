@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Home {% endblock %}
+
+{% block conteudo %}
+<img src="{% static 'img/imagem tela inicial 2.png'%}" alt="" width="1440">
+
+<div class="container">
+        <section> <!--Texto da imagem-->
+            <h1 class="preconnect">Quer aprender gramática inglesa?</h1>
+            <p>Temos atividades interativas, mapas mentais e resumos! Tudo para você</p>
+            <p>Comece já! </p>
+        </section>
+
+        <section>
+            <img src="{% static 'img/mapa icon.png' %}" width= "300">
+            <h1>Mapas mentais </h1>
+            <h2>Entre caminhos e cores</h2>
+            <p>O mapa mental é uma ótima maneira de estudar conteúdos: simples, eficaz e memorável.</p>
+        </section>
+</div>
+{% endblock %}
+<!--
+    conteiners
+    logo no navegador 
+-->

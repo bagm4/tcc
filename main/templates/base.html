@@ -40,7 +40,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6E526C;">
         <!-- Image and text -->
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'index' %}">
             Nome do Site
             <img src="{% static 'img/logo1.png' %}" width="30" height="30" class="d-inline-block align-top"
                 alt="Logo do site">
@@ -55,7 +55,7 @@
                         <a class="nav-link" id="name_menu" href="#">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>

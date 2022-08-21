@@ -4,21 +4,40 @@
 {% block titulo %} Home {% endblock %}
 
 {% block conteudo %}
-<img src="{% static 'img/imagem tela inicial 2.png'%}" alt="" width="1440">
+<img src="{% static 'img/imagem tela inicial 3.png'%}" width="100%" alt="Imagem inicial do site" >
 
 <div class="container">
-        <section> <!--Texto da imagem-->
-            <h1 class="preconnect">Quer aprender gramática inglesa?</h1>
-            <p>Temos atividades interativas, mapas mentais e resumos! Tudo para você</p>
-            <p>Comece já! </p>
-        </section>
+        
+    <div class="row margemRow" style="position: relative;">
+        <div class="col-4">
+            <img src="{% static 'img/mapa icon.png' %}" width= "300" alt="Icone de um mapa mental">
+        </div>
+            <div class="col-5" style="position: absolute; left: 400px; top: 90px;">
+                <h1 class="fontLobster">Mapas mentais </h1>
+                <h2 class="fontAmatic">Entre caminhos e cores</h2>
+                <p>O mapa mental é uma ótima maneira de estudar conteúdos: simples, eficaz e memorável.</p>
+            </div>
+            <div class="col-4" style="position: absolute; top: 110px; left: 600px;">
+                <img src="{% static 'img/decoracao.png' %}" width="400px" alt="imagem de remificação de um mapa mental">
+            </div>
+    </div>
 
-        <section>
-            <img src="{% static 'img/mapa icon.png' %}" width= "300">
-            <h1>Mapas mentais </h1>
-            <h2>Entre caminhos e cores</h2>
-            <p>O mapa mental é uma ótima maneira de estudar conteúdos: simples, eficaz e memorável.</p>
-        </section>
+    <div class="row margemRowDois">
+        <div class="col-4">
+            <img src="{% static 'img/espiralDecoracao.png' %}" width="500px" alt="Espiral colorida para decoração "
+            style="position: absolute; right: 100px">
+        </div>
+        <div class="col-4">
+            <h1 class="fontLobster alinharEsquerda">Simplifique!</h1>
+            <p class="alinharEsquerda">Com resumos você economiza tempo e energia! Além de fixar o mais importante na cabeça!</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'img/ilustracaoResumo.png' %}" alt="Ilustração de resumo" 
+            style="position: absolute; left: 0px;">
+        </div>
+    </div>
+        
+           
 </div>
 {% endblock %}
 <!--

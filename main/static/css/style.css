@@ -2,6 +2,28 @@
 :root pra salvar as cores
 */
 
+/* Index */
+
+.margemRow{
+    margin-top: 160px;
+}
+
+.margemRowDois{
+    margin-top: 200px;
+}
+
+.fontAmatic{
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.fontLobster{
+    font-family: 'Lobster', sans-serif;
+}
+
+.alinharEsquerda{
+    text-align: right;
+}
+/* Fim Index */
 *{
     margin: 0px;
     padding: 0px;

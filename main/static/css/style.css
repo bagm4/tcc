@@ -3,9 +3,8 @@
 */
 
 /* Index */
-
 .margemRow{
-    margin-top: 160px;
+    margin-top: 120px;
 }
 
 .margemRowDois{
@@ -24,6 +23,11 @@
     text-align: right;
 }
 /* Fim Index */
+
+/* Nav e footer */
+
+
+/* fim Nav e footer */
 *{
     margin: 0px;
     padding: 0px;
@@ -32,6 +36,7 @@
 :root{
     --cor_destaque: #CB874A; 
     --cor_roxo2: #6E526C;
+    --cor_branco: white;
 }
 
 .container{
@@ -83,4 +88,8 @@ h1{
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
+}
+
+.corBranco{
+    color: var(--cor_branco);
 }

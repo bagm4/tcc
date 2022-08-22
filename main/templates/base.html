@@ -50,20 +50,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" id="name_menu" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cadastre-se</a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="name_menu" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastre-se</a>
+                </li>
+            </ul>
         </div>
     </nav>
 </header>
@@ -78,11 +78,24 @@
 
 <footer>
     <div class="container-fluid">
-        <div class="row pt-5 pb-5" style="margin-top: 900px;">
-            <section>
-                <h1>Contato</h1>
-                <p>nomedosite@contato.com</p>
-            </section>
+
+        <div class="row pt-5 pb-5" style="margin: 100px 60px 0px 60px">
+            <div class="col-6" style="display: flex; flex-direction: row; align-items: center;">
+                <h1><a href="{% url 'index' %}" style="text-decoration: none; color: white">Nome do Site</a></h1>
+                <a href="{% url 'index' %}"> <img src="{% static 'img/logo1.png' %}" width="40" class="d-inline-block align-top"
+                    alt="Logo do site" style="margin-left: 10px;"> </a>
+            </div>
+
+            <div class="col-6">
+                <h1 class="alinharEsquerda corBranco">Contato</h1>
+                <p class="alinharEsquerda corBranco">nomedosite@contato.com</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="display: flex; justify-content: center;">
+                <p class="corBranco">©Todos os direitos autorais reservados para (nome do site) 2022</p>
+            </div>
         </div>
     </div>
 </footer>

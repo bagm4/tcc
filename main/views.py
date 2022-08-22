@@ -10,3 +10,6 @@ def sobre(request):
 
 def menu(request):
     return render(request, 'menu.html')
+
+def resumo(request):
+    return render(request, 'resumo.html')

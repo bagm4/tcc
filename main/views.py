@@ -7,3 +7,6 @@ def index(request):
 
 def sobre(request):
     return render(request, 'sobre.html')
+
+def menu(request):
+    return render(request, 'menu.html')

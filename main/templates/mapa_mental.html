@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Mapa Mental {% endblock %}
+<!--oque é melhor? deixar como <img> ou como background?
+    se <img> tem como impedir que a pessoa salve?-->
+{% block conteudo %}
+<div class="container-fluid text-center">
+    <img class="col-12" src="{% static 'img/img_mapa_mental_simples.png' %}" alt="">
+</div>
+{% endblock conteudo %}

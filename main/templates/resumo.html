@@ -4,95 +4,109 @@
 {% block titulo %} Resumo {% endblock %}
 
 {% block conteudo %}
+<style>
+    h2{
+        font-family: 'Architects Daughter';
+        font-weight: 400;
+        font-size: 23px;
+        color: #FEF9FB;
+        background-color: #6E526C;
+        padding: 3px 5px;
+    }
+</style>
 <div class="container">
     <img class="margemRow img-fluid" src="{% static 'img/barraResumo.png' %}" width="100%"
         alt="Imagem que denomina o conteúdo do resumo ' Simple Past Resuminho' ">
 
     <!-- Tópico 1 -->
-    <div class="row margemTopicos">
-        <div class="col-9">
-            <img class=" margemImagem" src="{% static 'img/titulo topico 1.png'%}"
-                alt="Tópico do resumo 'para que serve o simple past?' ">
+    <section>
+        <div class="row margemTopicos">
+            <div class="col-6">
+                <h2>Para que serve o Simple Past?</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-10">
-            <p>O Simple Past é utilizado para definir algo que já aconteceu e já acabou em um <span
-                    class="destacarTexto">passado definido</span>, ou seja, um momento determinado. De maneira mais
-                objetiva, é utilizado para dizer que algo aconteceu e não está mais acontecendo. </p>
+        <div class="row">
+            <div class="col-10">
+                <p>O Simple Past é utilizado para definir algo que já aconteceu e já acabou em um <span
+                        class="destacarTexto">passado definido</span>, ou seja, um momento determinado. De maneira mais
+                    objetiva, é utilizado para dizer que algo aconteceu e não está mais acontecendo. </p>
+            </div>
         </div>
-    </div>
+    
+        <div class="row">
+            <div class="col-2">
+                <p>Exemplo 1:</p>
+            </div>
+            <div class="col-6">
+                <p>I help <span class="destacarTexto">ed</span> Carlos <span class="destacarTexto">last week</span>.
+                </p>
+                <p>(Eu ajudei o Carlos semana passada.)</p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-10">
+                <p>Perceba que na frase acima, o verbo foi conjugado no passado (adicionando-se a terminação <span
+                        class="destacarTexto">-ed</span>) e foi especificado o momento em que o sujeito ajudou Carlos
+                    (<span class="destacarTexto">last week</span>)</p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-10">
+                <p>O Simple Past é dividido em três formas, chamadas de <span class="destacarTexto">afirmativa
+                        (Affirmative Form)</span>, <span class="destacarTexto">negativa
+                        (Negative Form)</span> e <span class="destacarTexto">interrogativa (Interrogative Form)</span>.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <div class="row">
-        <div class="col-2">
-            <p>Exemplo 1:</p>
-        </div>
-        <div class="col-6">
-            <p>I help <span class="destacarTexto">ed</span> Carlos <span class="destacarTexto">last week</span>.
-            </p>
-            <p>(Eu ajudei o Carlos semana passada.)</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-10">
-            <p>Perceba que na frase acima, o verbo foi conjugado no passado (adicionando-se a terminação <span
-                    class="destacarTexto">-ed</span>) e foi especificado o momento em que o sujeito ajudou Carlos
-                (<span class="destacarTexto">last week</span>)</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-10">
-            <p>O Simple Past é dividido em três formas, chamadas de <span class="destacarTexto">afirmativa
-                    (Affirmative Form)</span>, <span class="destacarTexto">negativa
-                    (Negative Form)</span> e <span class="destacarTexto">interrogativa (Interrogative Form)</span>.
-            </p>
-        </div>
-    </div>
 
     <!-- Tópico 2 -->
-    <div class="row margemTopicos">
-        <div class="col-9">
-            <img class=" margemImagem" src="{% static 'img/titulo topico 2.png'%}"
-                alt="Tópico do resumo 'forma afirmativa (affirmative form)' ">
+    <section>
+        <div class="row margemTopicos">
+            <div class="col-6">
+                <h2>Forma Afirmativa (Affirmative Form)</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-10">
-            <p>Adicionam-se as terminações <span class="destacarTexto">-d</span>, <span class="destacarTexto">-ed</span>
-                ou <span class="destacarTexto">-ied</span> dependendo da
-                situação.</p>
+        <div class="row">
+            <div class="col-10">
+                <p>Adicionam-se as terminações <span class="destacarTexto">-d</span>, <span class="destacarTexto">-ed</span>
+                    ou <span class="destacarTexto">-ied</span> dependendo da
+                    situação.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-10">
-            <p class="fontNegrito">-- Se o verbo não terminar com a letra <span class="destacarTexto">“E”</span>,
-                deve-se acresentar o <span class="destacarTexto">-ed</span>, como nos exemplos a seguir:</p>
+    
+        <div class="row">
+            <div class="col-10">
+                <p class="fontNegrito">-- Se o verbo não terminar com a letra <span class="destacarTexto">“E”</span>,
+                    deve-se acresentar o <span class="destacarTexto">-ed</span>, como nos exemplos a seguir:</p>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-2">
-            <p>Exemplo 2:</p>
+    
+        <div class="row">
+            <div class="col-2">
+                <p>Exemplo 2:</p>
+            </div>
+            <div class="col-4">
+                <p>She work<span class="destacarTexto">ed</span>(work) hard yesterday.</p>
+                <p>(Eu ajudei o Carlos semana passada.)</p>
+            </div>
         </div>
-        <div class="col-4">
-            <p>She work<span class="destacarTexto">ed</span>(work) hard yesterday.</p>
-            <p>(Eu ajudei o Carlos semana passada.)</p>
+    
+        <div class="row">
+            <div class="col-2">
+                <p>Exemplo 3:</p>
+            </div>
+            <div class="col-4">
+                <p> Claudio help<span class="destacarTexto">ed</span> (help) me last week.</p>
+                <p>(Eu ajudei o Carlos semana passada.)</p>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-2">
-            <p>Exemplo 3:</p>
-        </div>
-        <div class="col-4">
-            <p> Claudio help<span class="destacarTexto">ed</span> (help) me last week.</p>
-            <p>(Eu ajudei o Carlos semana passada.)</p>
-        </div>
-    </div>
-
+    
+    </section>
+    
 </div>
 
 <span class="destacarTexto"></span>

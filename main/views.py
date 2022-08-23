@@ -13,3 +13,6 @@ def menu(request):
 
 def resumo(request):
     return render(request, 'resumo.html')
+
+def mapa_mental(request):
+    return render (request, 'mapa_mental.html')

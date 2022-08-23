@@ -26,8 +26,30 @@
 
 /* Nav e footer */
 
-
 /* fim Nav e footer */
+
+
+/* Resumo escrito */
+.margemTopicos{
+    margin-top: 70px;
+}
+
+.margemImagem{
+    margin-bottom: 30px;
+}
+
+.destacarTexto{
+    color: var(--cor_destaque);
+}
+
+.fontNegrito{
+    font-weight: bold;
+}
+/* Fim Resumo escrito*/
+body{
+    background-color: FEF9FB;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -83,12 +105,12 @@ text-decoration: none;
     flex-direction: row-reverse; /*enquanto não tem logo*/
 }
 
-h1{
+/*.decoracaoTitulos{
     font-family: 'Lobster';
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-}
+}*/
 
 .corBranco{
     color: var(--cor_branco);

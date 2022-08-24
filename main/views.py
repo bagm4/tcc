@@ -16,3 +16,6 @@ def resumo(request):
 
 def mapa_mental(request):
     return render (request, 'mapa_mental.html')
+
+def cadastro(request):
+    return render (request, 'cadastro.html')

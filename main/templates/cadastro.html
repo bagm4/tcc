@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Cadastre-se {% endblock %}
+
+{% block conteudo %}
+<div class="container-fluid ml-0 mr-0 row pr-0">
+    <div class="col-6">
+        <div> <!--para css-->
+            <div class="form-group">
+                <label for="">Nome:</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">E-mail:</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Senha:</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Senha:</label>
+                <input class="form-control" type="text">
+            </div>
+        </div><!--para css-->
+    </div>
+    <div class="col-6 pr-0">
+        <img class="img-fluid" src="{% static 'img/img_cadastro.png' %}" alt="">
+    </div>
+</div>
+{% endblock conteudo %}

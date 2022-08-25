@@ -28,7 +28,7 @@
         background-color: #6E526C;
         margin-top: 90px;
         margin-bottom: 200px;
-        width: 700px;
+        width: 500px;
         padding: 30px 60px 30px 60px;
         box-shadow: -24px 24px 1px #CB874A;
     }
@@ -38,10 +38,10 @@
 <div class="container col-6 text-center menu_style">
     <div class="flex">
         <h1 class="mb-3">Menu</h1>
-        <a class="btn btn-primary mb-3 bnt_style" style="background-color: #CB874A;" href="#" role="button">Mapa principal</a>
-        <a class="btn btn-primary mb-3 bnt_style" href="{% url 'resumo' %}" role="button">Tela Resumo</a>
-        <a class="btn btn-primary mb-3 bnt_style" href="{% url 'mapa_mental' %}" role="button">Tela Mapa Resumido</a>
-        <a class="btn btn-primary mb-3 bnt_style" href="#" role="button">Atividades</a>
+        <a class="btn btn-primary mb-3 bnt_style fontNegrito" style="background-color: #CB874A;" href="#" role="button">MAPA PRINCIPAL</a>
+        <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="{% url 'mapa_mental' %}" role="button">MAPA RESUMIDO</a>
+        <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="{% url 'resumo' %}" role="button">RESUMO ESCRITO</a>
+        <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="#" role="button">ATIVIDADES</a>
     </div>
 </div>
 {% endblock conteudo %}

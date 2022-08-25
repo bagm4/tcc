@@ -25,7 +25,9 @@
 /* Fim Index */
 
 /* Nav e footer */
-
+.margemInferior{
+    margin-bottom: 50px;
+}
 /* fim Nav e footer */
 
 
@@ -54,6 +56,10 @@ table, th, td{
     border: 3px solid #6E526C;
 }
 
+th, td{
+    text-align: center;
+}
+
 th{
     font-size: 30px;
     background-color: #6E526C;
@@ -61,14 +67,14 @@ th{
     color: white;
 }
 
-table{
-    border-radius: 30px;
-}
-
 .celulaRoxa{
     background-color: #DEC9D0;
 }
 
+.alinharTabela{
+    display: flex;
+    justify-content: center;
+}
 /* Fim Resumo escrito*/
 body{
     background-color: #FEF9FB;
@@ -138,4 +144,18 @@ text-decoration: none;
 
 .corBranco{
     color: var(--cor_branco);
+}
+.cltitulo{
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    background: #DEC9D0;
+}
+
+.cl_style{
+    background-color: #937285;
+    box-shadow: -24px 24px 1px #7F968E;
+    width: 500px;
 }

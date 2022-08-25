@@ -7,42 +7,49 @@
 <img src="{% static 'img/imagem tela inicial 3.png'%}" width="100%" alt="Imagem inicial do site" >
 
 <div class="container">
-        
-    <div class="row margemRow" style="position: relative;">
-        <div class="col-4">
-            <img src="{% static 'img/mapa icon.png' %}" width= "300" alt="Icone de um mapa mental">
-        </div>
-            <div class="col-5" style="position: absolute; left: 400px; top: 90px;">
-                <h1 class="fontLobster">Mapas mentais </h1>
-                <h2 class="fontAmatic">Entre caminhos e cores</h2>
-                <p>O mapa mental é uma ótima maneira de estudar conteúdos: simples, eficaz e memorável.</p>
+    
+    <section>
+        <div class="row margemRow" style="position: relative;">
+            <div class="col-4">
+                <img src="{% static 'img/mapa icon.png' %}" width= "300" alt="Icone de um mapa mental">
             </div>
-            <div class="col-4" style="position: absolute; top: 110px; left: 600px;">
-                <img src="{% static 'img/decoracao.png' %}" width="400px" alt="imagem de remificação de um mapa mental">
+                <div class="col-5" style="position: absolute; left: 400px; top: 90px;">
+                    <h1 class="fontLobster">Mapas mentais </h1>
+                    <h2 class="fontAmatic">Entre caminhos e cores</h2>
+                    <p>O mapa mental é uma ótima maneira de estudar conteúdos: simples, eficaz e memorável.</p>
+                </div>
+                <div class="col-4" style="position: absolute; top: 110px; left: 600px;">
+                    <img src="{% static 'img/decoracao.png' %}" width="400px" alt="imagem de remificação de um mapa mental">
+                </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="row margemRowDois">
+            <div class="col-4">
+    
             </div>
-    </div>
-
-    <div class="row margemRowDois">
-        <div class="col-4">
-
+            <div class="col-4">
+                <h1 class="fontLobster alinharEsquerda" >Simplifique!</h1>
+                <p class="alinharEsquerda">Com resumos você economiza tempo e energia! Além de fixar o mais importante na cabeça!</p>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'img/ilustracaoResumo.png' %}" alt="Ilustração de resumo" 
+                style="position: absolute; top: 50px;">
+            </div>
         </div>
-        <div class="col-4">
-            <h1 class="fontLobster alinharEsquerda" >Simplifique!</h1>
-            <p class="alinharEsquerda">Com resumos você economiza tempo e energia! Além de fixar o mais importante na cabeça!</p>
-        </div>
-        <div class="col-2">
-            <img src="{% static 'img/ilustracaoResumo.png' %}" alt="Ilustração de resumo" 
-            style="position: absolute; top: 50px;">
-        </div>
-    </div>
+    </section>
             
 </div>
 
-<div class="row">
-    <div class="col-4">
-        <img src="{% static 'img/espiralDecoracao.png' %}" width="500px" alt="Espiral colorida para decoração ">
+<section class="margemInferior">
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'img/espiralDecoracao.png' %}" width="500px" alt="Espiral colorida para decoração ">
+        </div>
     </div>
-</div>
+</section>
+
 {% endblock %}
 <!--
     conteiners

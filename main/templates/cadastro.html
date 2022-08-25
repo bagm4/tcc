@@ -10,11 +10,12 @@
         border: none;
         text-transform: uppercase;
         color: #f8f4f4;
+        width: 100%;
     }
 </style>
-<div class="container-fluid row ml-0 mr-0 pr-0">
-    <div class="col-6 ">
-        <div class="cl_style p-3 pt-5 pb-5 m-5"> <!--para css-->
+<div class="row  ml-0 mr-0 pr-0">
+    <div class="col-6" style="padding: 0% 5%;">
+        <div class="cl_style m-5"> <!--para css-->
             <h2 class="cltitulo text-center">Efetue Cadastro</h2>
             <div class="form-group">
                 <label for="">Nome:</label>
@@ -32,13 +33,13 @@
                 <label for="">Senha:</label>
                 <input class="form-control" type="text">
             </div>
-            <div >
-                <!--texto e botao-->
+            <div class="text-center">
+                <p class="pt-1 pb-3">Já esta registrado? | <a style="color: rgb(231, 231, 231) ;" href="">Entrar</a></p>
                 <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="#" role="button">cadastrar</a>
             </div>
         </div><!--para css-->
     </div>
-    <div class="col-6 pr-0">
+    <div class="col-6 pr-0 pl-0">
         <img class="img-fluid" src="{% static 'img/img_cadastro.png' %}" alt="">
     </div>
 </div>

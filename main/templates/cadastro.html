@@ -17,7 +17,7 @@
     <div class="col-6" style="padding: 0% 5%;">
         <div class="cl_style m-5"> <!--para css-->
             <h2 class="cltitulo text-center">Efetue Cadastro</h2>
-            <div class="form-group">
+            <div class="form-group mt-5">
                 <label for="">Nome:</label>
                 <input class="form-control" type="text">
             </div>
@@ -34,8 +34,8 @@
                 <input class="form-control" type="text">
             </div>
             <div class="text-center">
-                <p class="pt-1 pb-3">Já esta registrado? | <a style="color: rgb(231, 231, 231) ;" href="">Entrar</a></p>
-                <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="#" role="button">cadastrar</a>
+                <p class="pt-1 pb-3">Já esta registrado? | <a style="color: rgb(231, 231, 231) ;" href="{% url 'entrar' %}">Entrar</a></p>
+                <a class="btn btn-primary mb-3 bnt_style fontNegrito" href="{% url 'entrar' %}" role="button">cadastrar</a>
             </div>
         </div><!--para css-->
     </div>

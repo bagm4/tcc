@@ -2,6 +2,19 @@
 :root pra salvar as cores
 */
 
+/* Mapa Principal */
+#mapaPrincipal{
+    overflow: hidden;
+}
+
+#imgMapaPrincipal{
+    transform-origin: center center;
+    object-fit: cover;
+    height: 60%;
+    width: 60%;
+}
+/* Fim Mapa Principal */
+
 /* Index */
 .margemRow{
     margin-top: 120px;

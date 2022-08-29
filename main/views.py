@@ -22,3 +22,6 @@ def cadastro(request):
 
 def entrar(request):
     return render (request, 'entrar.html')
+
+def mapaPrincipal(request):
+    return render (request, 'mapa_principal.html')

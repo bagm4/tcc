@@ -23,7 +23,8 @@ urlpatterns = [
     path('sobre/', sobre, name="sobre"),
     path('menu/', menu, name="menu"),
     path('resumo/', resumo, name="resumo"),
-    path('mapamental/', mapa_mental, name="mapa_mental"),
+    path('mapa_mental/', mapa_mental, name="mapa_mental"),
     path('cadastro/', cadastro, name="cadastro"),
     path('entrar/', entrar, name="entrar"),
+    path('mapaPrincipal/', mapaPrincipal, name="mapa_principal"),
 ]

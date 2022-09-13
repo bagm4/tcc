@@ -1,10 +1,60 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block titulo %} Mapa Mental {% endblock %}
-
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+  </style>
+  
 {% block conteudo %}
-    <div class="row" id="box">
-        <img class="col-12" id="imgMapaPrincipal" src="{% static 'img/Mapa Principal.png' %}" alt="">
-    </div>
+<div id="containerdois"></div>
+
+<script>
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    function drawImage(imageObj) {
+    var stage = new Konva.Stage({
+        container: 'containerdois',
+        width: width,
+        height: height,
+    });
+
+    var layer = new Konva.Layer();
+    // darth vader
+    var darthVaderImg = new Konva.Image({
+        image: imageObj,
+
+        x: stage.width() / 2 - width*3 / 2,
+        y: stage.height() / 2 - width*3*0.5625 / 2,  //aparentemente serve para a img começar no centro(mas depende do tamanho da imagem)
+        width: width*3,
+        height: width*0.5625*3,
+        draggable: true,
+    });
+
+    // add cursor styling
+    darthVaderImg.on('mouseover', function () {
+        document.body.style.cursor = 'pointer';
+    });
+    darthVaderImg.on('mouseout', function () {
+        document.body.style.cursor = 'default';
+    });
+
+    layer.add(darthVaderImg);
+    stage.add(layer);
+    }
+    var imageObj = new Image();
+    imageObj.onload = function () {
+    drawImage(this);
+    };
+    //imageObj.src = 'img/Mapa Principal.png';
+    imageObj.src = "{% static 'img/Mapa Principal.png' %}";
+</script>
 {% endblock %}
+

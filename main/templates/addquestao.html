@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Cadastre questão {% endblock %}
+
+{% block conteudo %}
+<h1>Adicione nova tarefa</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }} <!--para ficar em bloco  /  coluna-->
+        <input type="submit" class="btn btn-success" value="Criar Tarefa">
+    </form>
+
+{% endblock conteudo %}

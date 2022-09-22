@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block titulo %} Atividade {% endblock %}
+
+{% block conteudo %}
+<!--VER UM IF PARA NÃO EXIBIR AS ALTERNATIVAS DE VALOR NULO-->
+
+{% for questao in questoes %}
+<div class="question-box">
+    <div class="question-text">
+        <p>{{ questao.pergunta }}</p>
+    </div>
+    <div class="question-answers">
+        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
+        <label>{{ questao.alternativa1 }}</label>
+
+        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
+        <label>{{ questao.alternativa2 }}</label>
+
+        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
+        <label>{{ questao.alternativa3 }}</label>
+
+        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
+        <label>{{ questao.alternativa4 }}</label>
+
+    </div>
+
+    {% endfor %}
+    <input type="submit" value="End quiz">
+</div>
+{% endblock conteudo %}

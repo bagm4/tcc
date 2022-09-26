@@ -5,11 +5,15 @@
 
 {% block conteudo %}
 <style>
-    .bnt_style{
+    .bnt_style {
         background-color: #DEC9D0;
         border: none;
         text-transform: uppercase;
         color: rgb(59, 59, 59);
+    }
+    table a{
+        text-decoration: none;
+        color: rgb(32, 32, 32);
     }
 </style>
 
@@ -18,12 +22,23 @@
         <h1 class="fontAmatic mt-4">Adicione nova tarefa</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }} <!--para ficar em bloco  /  coluna-->
+            {{ form.as_p }}
+            <!--para ficar em bloco  /  coluna-->
             <input type="submit" class="btn btn-success bnt_style" value="Criar Tarefa">
         </form>
     </div>
-    <div class="col-6 pr-0 pl-0">
-        <img class="img-fluid" src="{% static 'img/addquestao.png' %}" alt="">
+    <div class="col-6 pr-0 pl-0" style="background-color: #DEC9D0 ;">
+        <div class="p-5">
+            <table class="table table-striped tablelist tablelist">
+                {% for questao in questoes %}
+                <tr>
+                    <td><span><a href="questao/{{questao.id}}">{{questao.pergunta}}</a></span></td>
+                    <td><span><i class="fas fa-trash"></i></span></td>
+                    <td><a href="{% url 'editquestao' questao.id %}"><span><i class="fas fa-edit"></i></span></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
     </div>
 </div>
 

@@ -28,5 +28,6 @@ urlpatterns = [
     path('entrar/', entrar, name="entrar"),
     path('mapaPrincipal/', mapaPrincipal, name="mapa_principal"),
     path('addquestao/', addquestao, name="addquestao"),
+    path('editquestao/<int:id>', editquestao, name="editquestao"),
     path('atividade/', atividade, name="atividade"),
 ]

@@ -27,6 +27,7 @@
             <input type="submit" class="btn btn-success bnt_style" value="Criar Tarefa">
         </form>
     </div>
+    <!-- LISTAGEM -->
     <div class="col-6 pr-0 pl-0" style="background-color: #DEC9D0 ;">
         <div class="p-5">
             {% if messages %}
@@ -40,7 +41,7 @@
                 {% for questao in questoes %}
                 <tr>
                     <td><span><a href="questao/{{questao.id}}">{{questao.pergunta}}</a></span></td>
-                    <td><a href="{% url 'deletequestao' questao.id %}"><span><i class="fas fa-trash"></i></span></a></td>
+                    <td><a class="delete-btn" href="{% url 'deletequestao' questao.id %}"><span><i class="fas fa-trash"></i></span></a></td>
                     <td><a href="{% url 'editquestao' questao.id %}"><span><i class="fas fa-edit"></i></span></a></td>
                 </tr>
                 {% endfor %}

@@ -4,34 +4,58 @@
 {% block titulo %} Atividade {% endblock %}
 
 {% block conteudo %}
-<!--VER UM IF PARA NÃO EXIBIR AS ALTERNATIVAS DE VALOR NULO-->
-<div class="container text-center">
-    <div>
+<style>
+    .flexquestoes{
+        display: flex;
+        flex-direction: column;
+    }
+    .margem{
+        width: 60%;
+        margin: auto;
+    }
+    .bnt_style{   
+        background-color: #CB874A;
+        border: none;
+        text-transform: uppercase;
+        color: #f5f5f5;
+    }
+</style>
+<div class="container p-5 margem">
+    <div class="text-center">
         <h1 class="fontLobster">Simple Past</h1>
         <h2 class="fontAmatic" style="color: rgb(88, 88, 88);">Atividade</h2>
     </div>
     {% for questao in questoes %}
-    <div class="question-box">
-        <div class="question-text">
+    <div class="question-box pr-5 pl-5">
+        <div class="question-text ">
             <p>{{ questao.pergunta }}</p>
         </div>
-        <div class="question-answers">
-            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
-            <label>{{ questao.alternativa1 }}</label>
-
-            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
-            <label>{{ questao.alternativa2 }}</label>
-
-            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
-            <label>{{ questao.alternativa3 }}</label>
-
-            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
-            <label>{{ questao.alternativa4 }}</label>
+        <div class="question-answers flexquestoes">
+            <div>
+                <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
+                <label>{{ questao.alternativa1 }}</label>
+            </div>
+            <div>
+                <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
+                <label>{{ questao.alternativa2 }}</label>
+            </div>
+            {% if questao.alternativa3 %}
+            <div>
+                <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
+                <label>{{ questao.alternativa3 }}</label>
+            </div>
+            {% endif %}
+            {% if questao.alternativa4 %}
+            <div>
+                <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
+                <label>{{ questao.alternativa4 }}</label>
+            </div>
+            {% endif %}      
         </div>
     </div>
 
         {% endfor %}
-        <input type="submit" value="End quiz">
+        <input  class="btn btn-success bnt_style" type="submit" value="Responder">
 
 </div>
 

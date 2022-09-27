@@ -61,6 +61,7 @@
     font-weight: bold;
 }
 
+
 .margemSubTopicos{
     margin-top: 30px;
 }
@@ -167,5 +168,29 @@ text-decoration: none;
 .alternativa34{
     border-color: gray;
 }
+
+/* mensagem de deletado com sucesso*/
+ul.messages {
+    padding: 0;
+}
+
+.alert-info {
+    color: #0f2909;
+    background-color: #B7C9B3;
+    border-color: #B7C9B3;
+}
+ 
+ul .messages li {
+    list-style: none;
+}
+
+/*atividade*/
+
+.question-box{
+    border: 1px solid;
+    border-color:#0f2909;
+    margin-bottom: 25px;
+}
+
 
 

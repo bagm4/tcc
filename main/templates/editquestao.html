@@ -1,2 +1,30 @@
-<h1>ola mundo</h1>
-<p>testando</p>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Edite questão {% endblock %}
+
+{% block conteudo %}
+<style>
+    .bnt_style {
+        background-color: #DEC9D0;
+        border: none;
+        text-transform: uppercase;
+        color: rgb(59, 59, 59);
+    }
+</style>
+<div class="row" >
+    <div class="col-4" style="background-color: #DEC9D0 ;">     
+    </div>
+    <div class="col-4 mb-5" style="padding: 0% 5%;">
+        <h1 class="fontAmatic mt-4">Editar Questão</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!--para ficar em bloco  /  coluna-->
+            <input type="submit" class="btn btn-success bnt_style" value="Editar Tarefa">
+        </form>
+    </div>
+    <div class="col-4" style="background-color: #DEC9D0 ;">     
+    </div>
+</div>
+{% endblock conteudo %}

@@ -1,31 +1,38 @@
+{% extends 'base.html' %}
 {% load static %}
 
 {% block titulo %} Atividade {% endblock %}
 
 {% block conteudo %}
 <!--VER UM IF PARA NÃO EXIBIR AS ALTERNATIVAS DE VALOR NULO-->
-
-{% for questao in questoes %}
-<div class="question-box">
-    <div class="question-text">
-        <p>{{ questao.pergunta }}</p>
+<div class="container text-center">
+    <div>
+        <h1 class="fontLobster">Simple Past</h1>
+        <h2 class="fontAmatic" style="color: rgb(88, 88, 88);">Atividade</h2>
     </div>
-    <div class="question-answers">
-        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
-        <label>{{ questao.alternativa1 }}</label>
+    {% for questao in questoes %}
+    <div class="question-box">
+        <div class="question-text">
+            <p>{{ questao.pergunta }}</p>
+        </div>
+        <div class="question-answers">
+            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
+            <label>{{ questao.alternativa1 }}</label>
 
-        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
-        <label>{{ questao.alternativa2 }}</label>
+            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
+            <label>{{ questao.alternativa2 }}</label>
 
-        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
-        <label>{{ questao.alternativa3 }}</label>
+            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
+            <label>{{ questao.alternativa3 }}</label>
 
-        <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
-        <label>{{ questao.alternativa4 }}</label>
-
+            <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
+            <label>{{ questao.alternativa4 }}</label>
+        </div>
     </div>
 
-    {% endfor %}
-    <input type="submit" value="End quiz">
+        {% endfor %}
+        <input type="submit" value="End quiz">
+
 </div>
-{% endblock conteudo %}
+
+    {% endblock conteudo %}

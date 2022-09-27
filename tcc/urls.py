@@ -29,5 +29,6 @@ urlpatterns = [
     path('mapaPrincipal/', mapaPrincipal, name="mapa_principal"),
     path('addquestao/', addquestao, name="addquestao"),
     path('editquestao/<int:id>', editquestao, name="editquestao"),
+    path('delet/<int:id>', deletequestao, name= 'deletequestao'),
     path('atividade/', atividade, name="atividade"),
 ]

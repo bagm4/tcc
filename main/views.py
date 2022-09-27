@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from main.models import Questao
 from .forms import CadastroForm, QuestaoForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -44,7 +45,7 @@ def addquestao (request):
             questao = form.save(commit=False) #para esperar a gente mandar salvar
             questao.done = 'doing'
             questao.save()
-            return redirect('/')
+            return redirect('/addquestao/')
     else:
         form = QuestaoForm()
 
@@ -60,8 +61,14 @@ def editquestao (request, id):
         form = QuestaoForm(request.POST, instance=questao)
         if(form.is_valid()):
             questao.save()
-            return redirect('/')
+            return redirect('/addquestao/')
         else:
             return render (request, 'editquestao.html', {'form':form, 'questao':questao})
     else:
         return render (request, 'editquestao.html', {'form':form, 'quustao':questao})
+
+def deletequestao (request, id):
+    questao = get_object_or_404(Questao, pk=id)
+    questao.delete()
+    messages.info(request, 'tarefa deletada com sucesso ;)')
+    return redirect('/addquestao/')

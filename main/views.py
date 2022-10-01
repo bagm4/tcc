@@ -4,6 +4,7 @@ from main.models import Questao
 from .forms import  QuestaoForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -35,6 +36,7 @@ def atividade (request):
 
 @login_required
 def addquestao (request):
+    #cadastro da questao
     if request.method == 'POST':
         form = QuestaoForm(request.POST)
         if form.is_valid():
@@ -45,6 +47,7 @@ def addquestao (request):
     else:
         form = QuestaoForm()
 
+    #exibir questão
     questao = Questao.objects.all()
     context = {'form': form , 'questoes':questao}
 

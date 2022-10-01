@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block titulo %} Edite questão {% endblock %}
 
@@ -19,7 +20,7 @@
         <h1 class="fontAmatic mt-4">Editar Questão</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
             <!--para ficar em bloco  /  coluna-->
             <input type="submit" class="btn btn-success bnt_style" value="Editar Tarefa">
         </form>

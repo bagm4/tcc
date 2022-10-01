@@ -6,12 +6,6 @@ from django.db import models
 #============================================
 #    POR FAVOR SEM MIGRAÇOES POR AGORA 
 #============================================
-class Usuario (models.Model):
-    nome = models.CharField(max_length=50)
-    email = models.EmailField()
-    senha = models.CharField(max_length=30, blank=False)  #qual deveria ser o da senha? charfield?
-    senha2 = models.CharField(max_length=30, blank=False)  #para comparar com a senha
-    # um IF para ver se as senhas são iguais
 
 class Questao (models.Model):
     pergunta = models.TextField()

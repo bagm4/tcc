@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
 from main.models import Questao
-from .forms import CadastroForm, QuestaoForm
+from .forms import  QuestaoForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -21,9 +21,6 @@ def resumo(request):
 
 def mapa_mental(request):
     return render (request, 'mapa_mental.html')
-
-def cadastro(request):
-    return render (request, 'cadastro.html')
 
 def mapaPrincipal(request):
     return render (request, 'mapa_principal.html')

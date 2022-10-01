@@ -1,5 +1,6 @@
 from django.contrib import admin
-from main.models import *
+from accounts.models import *
+
 
 # Register your models here.
-admin.site.register(Questao)
+admin.site.register(User)

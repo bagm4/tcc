@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %} Cadastre-se {% endblock %}
+
+{% block conteudo %}
+<style>
+    .bnt_style{
+        background-color: #CB874A;
+        border: none;
+        text-transform: uppercase;
+        color: #f8f4f4;
+        width: 100%;
+    }
+</style>
+<div class="row  ml-0 mr-0 pr-0">
+    <div class="col-6" style="padding: 0% 5%;">
+        <div class="cl_style m-5"> <!--para css-->
+            <h2 class="cltitulo text-center mb-5">Entrar</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+    
+                {{ form|crispy }}
+
+                <p class="pt-1 pb-3 mb-3 mt-5">Não tem uma conta? | <a style="color: rgb(231, 231, 231) ;" href="#">Cadastre-se</a></p>
+
+                <button type="submit" class="mt-5 btn bnt_style btn-block">Entrar</button>
+            </form>     
+        </div>
+        </div><!--para css-->
+    <div class="col-6 pr-0 pl-0" style="background-color: #6E526C;">
+
+    </div>
+</div>
+{% endblock conteudo %}

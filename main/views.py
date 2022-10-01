@@ -1,9 +1,9 @@
 from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
-
 from main.models import Questao
 from .forms import CadastroForm, QuestaoForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -25,12 +25,10 @@ def mapa_mental(request):
 def cadastro(request):
     return render (request, 'cadastro.html')
 
-def entrar(request):
-    return render (request, 'entrar.html')
-
 def mapaPrincipal(request):
     return render (request, 'mapa_principal.html')
 
+@login_required
 def atividade (request):
     questoes = Questao.objects.all()
     context = {
@@ -38,6 +36,7 @@ def atividade (request):
     }
     return render (request, 'atividade.html',context)
 
+@login_required
 def addquestao (request):
     if request.method == 'POST':
         form = QuestaoForm(request.POST)
@@ -54,6 +53,7 @@ def addquestao (request):
 
     return render (request, 'addquestao.html', context)
 
+@login_required
 def editquestao (request, id):
     questao = get_object_or_404(Questao, pk=id)
     form = QuestaoForm(instance=questao) #formulario pre populado para editar
@@ -67,6 +67,7 @@ def editquestao (request, id):
     else:
         return render (request, 'editquestao.html', {'form':form, 'quustao':questao})
 
+@login_required
 def deletequestao (request, id):
     questao = get_object_or_404(Questao, pk=id)
     questao.delete()

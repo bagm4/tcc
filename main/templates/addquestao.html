@@ -31,6 +31,7 @@
     <!-- LISTAGEM -->
     <div class="col-6 pr-0 pl-0" style="background-color: #DEC9D0 ;">
         <div class="p-5">
+            <!--LISTAGEM-->
             {% if messages %}
                 <ul>
                 {% for message in messages %}
@@ -47,6 +48,26 @@
                 </tr>
                 {% endfor %}
             </table>
+            <div class="pagination">
+                <!--Pagina Antes-->
+                <span class="step-links">
+                    {% if questoes.has_previous %}
+                    <!--se tenho pagina anterior [...]-->
+                    <a href="?page={{ questoes.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+                    {% endif %}
+               
+                    <span class="current">
+                        <!--Durante-->
+                        {{ questoes.number }} de {{ questoes.paginator.num_pages }}
+                    </span>
+         
+                    <!--Pagina Depois-->
+                    {% if questoes.has_next %}
+                    <a href="?page={{ questoes.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+                    {% endif %}
+                </span>
+            </div>
+        
         </div>
     </div>
 </div>

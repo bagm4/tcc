@@ -23,7 +23,7 @@
     
                 {{ form|crispy }}
 
-                <p class="pt-1 pb-3 mb-3 mt-5">Já tem uma conta? | <a style="color: rgb(231, 231, 231) ;" href="#">Entrar</a></p>
+                <p class="pt-1 pb-3 mb-3 mt-5">Já tem uma conta? | <a style="color: rgb(231, 231, 231) ;" href="{% url 'login' %}">Entrar</a></p>
 
                 <button type="submit" class="mt-5 btn bnt_style btn-block">Cadastre-se</button>
             </form>     

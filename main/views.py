@@ -1,5 +1,5 @@
-from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from main.models import Questao
 from .forms import  QuestaoForm
 from django.contrib import messages
@@ -48,7 +48,11 @@ def addquestao (request):
         form = QuestaoForm()
 
     #exibir questão
-    questao = Questao.objects.all()
+    questaolist = Questao.objects.all()
+    paginator = Paginator(questaolist, 6)
+    page = request.GET.get('page')
+    questao = paginator.get_page(page)
+
     context = {'form': form , 'questoes':questao}
 
     return render (request, 'addquestao.html', context)

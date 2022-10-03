@@ -11,7 +11,7 @@
     <section>
         <div class="row margemRow" style="position: relative;">
             <div class="col-4">
-                <img src="{% static 'img/mapa icon.png' %}" class="img-fluid" width= "300" alt="Icone de um mapa mental">
+                <a href="{% url 'mapa_principal' %}"><img src="{% static 'img/mapa icon.png' %}" class="img-fluid" width= "300" alt="Icone de um mapa mental"></a>
             </div>
                 <div class="col-5" style="position: absolute; left: 400px; top: 90px;">
                     <h1 class="fontLobster">Mapas mentais </h1>
@@ -34,8 +34,8 @@
                 <p class="alinharEsquerda">Com resumos você economiza tempo e energia! Além de fixar o mais importante na cabeça!</p>
             </div>
             <div class="col-2">
-                <img src="{% static 'img/ilustracaoResumo.png' %}" width="370px" class="img-fluid" alt="Ilustração de resumo" 
-                style="position: absolute; top: 50px;">
+                <a href="{% url 'resumo' %}"><img src="{% static 'img/ilustracaoResumo.png' %}" width="370px" class="img-fluid" alt="Ilustração de resumo" 
+                    style="position: absolute; top: 50px;"></a>
             </div>
         </div>
     </section>

@@ -30,10 +30,10 @@
         <div class="question-text ">
             <p>{{ questao.pergunta }}</p>
         </div>
-        <div class="question-answers flexquestoes">
+        <div class="question-answers flexquestoes ">
             <div>
-                <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
-                <label>{{ questao.alternativa1 }}</label>
+                <input class="option" type="radio" id="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
+                <label for="radio">{{ questao.alternativa1 }}</label>
             </div>
             <div>
                 <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">

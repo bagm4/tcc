@@ -14,7 +14,6 @@ class QuestaoForm(forms.ModelForm):
         fields = '__all__'
 
 class RespostaForms(forms.ModelForm):
-
     class Meta:
         model= Resposta
-        fields = '__all__'
+        fields = ('resposta',)

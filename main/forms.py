@@ -1,3 +1,4 @@
+from dataclasses import field
 from turtle import textinput
 from django import forms
 from .models import *
@@ -10,4 +11,10 @@ class QuestaoForm(forms.ModelForm):
 
     class Meta:
         model = Questao
+        fields = '__all__'
+
+class RespostaForms(forms.ModelForm):
+
+    class Meta:
+        model= Resposta
         fields = '__all__'

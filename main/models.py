@@ -17,8 +17,7 @@ class Questao (models.Model):
 
 
 class Resposta (models.Model):
-    resposta = models.CharField(max_length=2)
-    questao = models.OneToOneField(Questao,on_delete=models.CASCADE)
+    resposta = models.CharField(max_length=1)
 #1 campo indicando a alernativa marcada
 #vincular model com questao
 #relacionamento questao e resposta   e      resposta e aluno

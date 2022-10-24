@@ -1,19 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block titulo %} Atividade {% endblock %}
 
 {% block conteudo %}
 <style>
-    .flexquestoes{
+    .flexquestoes {
         display: flex;
         flex-direction: column;
     }
-    .margem{
+
+    .margem {
         width: 60%;
         margin: auto;
     }
-    .bnt_style{   
+
+    .bnt_style {
         background-color: #CB874A;
         border: none;
         text-transform: uppercase;
@@ -26,43 +29,42 @@
         <h2 class="fontAmatic" style="color: rgb(88, 88, 88);">Atividade</h2>
     </div>
     {% for questao in questoes %}
-    
+
     <!--base de dados para receber-->
-    <form action="" method="post">
-        <div class="question-box pr-5 pl-5">
-            <div class="question-text ">
-                <p>{{ questao.pergunta }}</p>
-            </div>
-            <div class="question-answers flexquestoes ">
-                <div>
-                    <input class="option" type="radio" id="radio" name="{{ questao.id }}" value="{{ questao.alternativa1 }}">
-                    <label for="radio">{{ questao.alternativaa }}</label>
-                </div>
-                <div>
-                    <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa2 }}">
-                    <label>{{ questao.alternativab }}</label>
-                </div>
-                {% if questao.alternativac %}
-                <div>
-                    <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa3 }}">
-                    <label>{{ questao.alternativac }}</label>
-                </div>
-                {% endif %}
-                {% if questao.alternativad %}
-                <div>
-                    <input class="option" type="radio" name="{{ questao.id }}" value="{{ questao.alternativa4 }}">
-                    <label>{{ questao.alternativad }}</label>
-                </div>
-                {% endif %}  
-                <input  class="btn btn-success bnt_style mb-2" type="submit" value="Responder">    
-            </div>
+
+    <div class="question-box pr-5 pl-5">
+        <div class="question-text ">
+            <p>{{ questao.pergunta }}</p>
         </div>
-    
-            {% endfor %}
-            <!--<input  class="btn btn-success bnt_style" type="submit" value="Responder">-->
-    </form>
-    
+        <div class="question-answers flexquestoes ">
+            <div>
+                <p>a) {{questao.alternativaa}}</p>
+                <p>b) {{questao.alternativab}}</p>
+            </div>
+            {% if questao.alternativac %}
+            <div>
+                <p>c) {{questao.alternativac}}</p>
+            </div>
+            {% endif %}
+            {% if questao.alternativad %}
+            <div>
+                <p>a) {{questao.alternativad}}</p>
+            </div>
+            {% endif %}
+            <!--form receber resposta-->
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input class="btn btn-success bnt_style mb-2" type="submit" value="Responder">
+            </form>
+        </div>
+    </div>
+
+    {% endfor %}
+    <!--<input  class="btn btn-success bnt_style" type="submit" value="Responder">-->
+
+
 
 </div>
 
-    {% endblock conteudo %}
+{% endblock conteudo %}

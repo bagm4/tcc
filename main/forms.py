@@ -13,7 +13,3 @@ class QuestaoForm(forms.ModelForm):
         model = Questao
         fields = '__all__'
 
-class RespostaForms(forms.ModelForm):
-    class Meta:
-        model= Resposta
-        fields = ('resposta',)

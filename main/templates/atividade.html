@@ -52,11 +52,8 @@
             </div>
             {% endif %}
             <!--form receber resposta-->
-            <form method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <input class="btn btn-success bnt_style mb-2 corrigir" type="submit" value="Responder">
-            </form>
+            <input class="btn btn-success bnt_style mb-2 corrigir" type="submit" value="Responder">
+           
         </div>
     </div>
 

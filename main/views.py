@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from main.models import Questao
-from .forms import  QuestaoForm, RespostaForms
+from .forms import  QuestaoForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -29,17 +29,7 @@ def mapaPrincipal(request):
 @login_required
 def atividade (request):
     questoes = Questao.objects.all()
-    if request.method == 'POST':
-        form = RespostaForms(request.POST)
-        if form.is_valid():
-            resposta = form.save(commit=False) #para esperar a gente mandar salvar
-            resposta.done = 'doing'
-            resposta.save()
-            return redirect('/atividade')
-    else:
-        form = RespostaForms()
-
-    context = {'questoes': questoes, 'form': form}
+    context = {'questoes': questoes}
     return render (request, 'atividade.html',context)
 
 @login_required

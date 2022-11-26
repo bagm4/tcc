@@ -13,20 +13,23 @@
         color: #f8f4f4;
         width: 100%;
     }
+    .text-muted{
+    color: white!important;
+    }
 </style>
 <div class="row  ml-0 mr-0 pr-0">
-    <div class="col-6" style="padding: 0% 5%;">
+    <div class="col-6" style="padding: 0% 2%;">
         <div class="cl_style m-5"> <!--para css-->
-            <h2 class="cltitulo text-center mb-5">Cadastre-se</h2>
+            <h2 class="cltitulo text-center mb-4">Cadastre-se</h2>
             <form method="post">
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}">
     
                 {{ form|crispy }}
 
-                <p class="pt-1 pb-3 mb-3 mt-5">Já tem uma conta? | <a style="color: rgb(231, 231, 231) ;" href="{% url 'login' %}">Entrar</a></p>
+                <p class="pt-1 pb-3 mb-1 mt-3">Já tem uma conta? | <a style="color: rgb(231, 231, 231) ;" href="{% url 'login' %}">Entrar</a></p>
 
-                <button type="submit" class="mt-5 btn bnt_style btn-block">Cadastre-se</button>
+                <button type="submit" class="mt-2 btn bnt_style btn-block">Cadastre-se</button>
             </form>     
         </div>
         </div><!--para css-->

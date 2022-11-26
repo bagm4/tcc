@@ -42,7 +42,7 @@
             <table class="table table-striped tablelist tablelist">
                 {% for questao in questoes %}
                 <tr>
-                    <td><span><a href="questao/{{questao.id}}">{{questao.pergunta}}</a></span></td>
+                    <td><span>{{questao.pergunta}}</span></td>
                     <td><a class="delete-btn" href="{% url 'deletequestao' questao.id %}"><span><i class="fas fa-trash"></i></span></a></td>
                     <td><a href="{% url 'editquestao' questao.id %}"><span><i class="fas fa-edit"></i></span></a></td>
                 </tr>

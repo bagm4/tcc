@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block titulo %} Cadastre-se {% endblock %}
@@ -29,8 +30,8 @@
             </form>     
         </div>
         </div><!--para css-->
-    <div class="col-6 pr-0 pl-0" style="background-color: #CB874A;">
-        
+    <div class="col-6 pr-0 pl-0">
+        <img src="{% static 'img/img_cadastro.png' %}" class= "img-fluid"alt="">
     </div>
 </div>
 {% endblock conteudo %}

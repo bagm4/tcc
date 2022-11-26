@@ -4,6 +4,7 @@ from main.models import Questao
 from .forms import  QuestaoForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -28,9 +29,26 @@ def mapaPrincipal(request):
 
 @login_required
 def atividade (request):
-    questoes = Questao.objects.all()
-    context = {'questoes': questoes}
-    return render (request, 'atividade.html',context)
+    print('teste')
+    if request.method == "POST":
+        
+        id = request.POST['id']
+        questoes = Questao.objects.all()
+        alternativas_marcadas = []
+        for questao in questoes:
+            alternativas_marcadas.append(request.POST['questao'+ str(questao.id)])
+
+            questao = Questao.objects.get(pk=id)
+            respostas = [].append((questao.certa==alternativas_marcadas))
+            if questao.certa == alternativas_marcadas:
+                return HttpResponse('certa')
+            else:
+                return HttpResponse('incorreta')
+    else:
+        print('get')
+        questoes = Questao.objects.all()
+        context = {'questoes': questoes}
+        return render (request, 'atividade.html',context)
 
 @login_required
 def addquestao (request):

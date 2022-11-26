@@ -37,7 +37,20 @@
             <p>{{ questao.pergunta }}</p>
         </div>
         <div class="question-answers flexquestoes ">
-            <div>
+            <form action="{%url 'atividade'%}" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="id" value="{{questao.id}}">
+                <input id="alternativa1" name="questao{{questao.id}}" value="{{questao.alternativaa}}" type="radio">
+                <label for="alternativa1">{{questao.alternativaa}}</label>
+                <input id="alternativa2" name="questao{{questao.id}}" value="{{questao.alternativab}}" type="radio">
+                <label for="alternativa2">{{questao.alternativab}}</label>
+                {% if questao.alternativac %}
+                <input id="alternativa3" name="questao{{questao.id}}" value="{{questao.alternativac}}" type="radio">
+                <label for="alternativa3">{{questao.alternativac}}</label>
+                {% endif %}
+                <button type="submit">Responder</button>
+            </form>
+            <!--<div>
                 <p>a) {{questao.alternativaa}}</p>
                 <p>b) {{questao.alternativab}}</p>
             </div>
@@ -50,18 +63,12 @@
             <div>
                 <p>a) {{questao.alternativad}}</p>
             </div>
-            {% endif %}
-            <!--form receber resposta-->
-            <!--<input class="btn btn-success bnt_style mb-2 corrigir" type="submit" value="Responder">-->
-            <button class="btn btn-success bnt_style mb-2 corrigir"  value="Responder">mostrar resposta</button>
-           
+            {% endif %}-->        
         </div>
     </div>
-
     {% endfor %}
-    <!--<input  class="btn btn-success bnt_style" type="submit" value="Responder">-->
-
-
+    <input class="btn btn-success bnt_style mb-2 corrigir" type="submit" value="Ver Resposta">
+    
 
 </div>
 

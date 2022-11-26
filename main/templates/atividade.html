@@ -28,29 +28,14 @@
         <h1 class="fontLobster">Simple Past</h1>
         <h2 class="fontAmatic" style="color: rgb(88, 88, 88);">Atividade</h2>
     </div>
+
     {% for questao in questoes %}
-
-    <!--base de dados para receber-->
-
     <div class="question-box pr-5 pl-5">
         <div class="question-text ">
             <p>{{ questao.pergunta }}</p>
         </div>
         <div class="question-answers flexquestoes ">
-            <form action="{%url 'atividade'%}" method="post">
-                {%csrf_token%}
-                <input type="hidden" name="id" value="{{questao.id}}">
-                <input id="alternativa1" name="questao{{questao.id}}" value="{{questao.alternativaa}}" type="radio">
-                <label for="alternativa1">{{questao.alternativaa}}</label>
-                <input id="alternativa2" name="questao{{questao.id}}" value="{{questao.alternativab}}" type="radio">
-                <label for="alternativa2">{{questao.alternativab}}</label>
-                {% if questao.alternativac %}
-                <input id="alternativa3" name="questao{{questao.id}}" value="{{questao.alternativac}}" type="radio">
-                <label for="alternativa3">{{questao.alternativac}}</label>
-                {% endif %}
-                <button type="submit">Responder</button>
-            </form>
-            <!--<div>
+            <div>
                 <p>a) {{questao.alternativaa}}</p>
                 <p>b) {{questao.alternativab}}</p>
             </div>
@@ -63,13 +48,20 @@
             <div>
                 <p>a) {{questao.alternativad}}</p>
             </div>
-            {% endif %}-->        
+            {% endif %}
+       
+            <button type="button" class="btn btn-success bnt_style mb-2 corrigir" value="Ver resposta" onclick="swal('{{ questao.certa }}')">mostrar resposta</button>
+
         </div>
     </div>
     {% endfor %}
-    <input class="btn btn-success bnt_style mb-2 corrigir" type="submit" value="Ver Resposta">
-    
-
 </div>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function alertaCorrigir(){
+        swal("Resposta certa: {{ questao.certa }}");
+    }
+</script>
 {% endblock conteudo %}
+
